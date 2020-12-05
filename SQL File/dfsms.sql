@@ -1,14 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.9.0.1
+-- version 5.0.4
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 25, 2019 at 04:56 PM
--- Server version: 10.3.15-MariaDB
--- PHP Version: 7.2.19
+-- Generation Time: Dec 05, 2020 at 05:29 AM
+-- Server version: 10.4.16-MariaDB
+-- PHP Version: 7.3.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -44,7 +43,7 @@ CREATE TABLE `tbladmin` (
 --
 
 INSERT INTO `tbladmin` (`ID`, `AdminName`, `UserName`, `MobileNumber`, `Email`, `Password`, `AdminRegdate`, `UpdationDate`) VALUES
-(1, 'Admin', 'admin', 1234567899, 'admin@test.com', 'f925916e2754e5e03f75dd58a5733251', '2019-12-22 18:30:00', '2019-12-25 14:56:18');
+(1, 'THE BOYS', 'admin', 6969696969, 'theboys@ymail.com', 'f925916e2754e5e03f75dd58a5733251', '2020-11-28 18:30:00', '2020-12-05 03:15:52');
 
 -- --------------------------------------------------------
 
@@ -64,12 +63,12 @@ CREATE TABLE `tblcategory` (
 --
 
 INSERT INTO `tblcategory` (`id`, `CategoryName`, `CategoryCode`, `PostingDate`) VALUES
-(1, 'Milk', 'MK01', '2019-12-24 16:27:43'),
-(2, 'Butter', 'BT01', '2019-12-24 16:27:59'),
-(3, 'Bread', 'BD01', '2019-12-24 16:28:12'),
-(4, 'Paneer', 'PN01', '2019-12-24 16:29:18'),
-(5, 'Soya', 'SY01', '2019-12-24 16:29:58'),
-(7, 'Ghee', 'GH01', '2019-12-25 14:52:08');
+(1, 'Milk', 'MK01', '2020-11-29 16:27:43'),
+(2, 'Butter', 'BT01', '2020-11-29 16:27:59'),
+(3, 'Bread', 'BD01', '2020-11-29 16:28:12'),
+(4, 'Paneer', 'PN01', '2020-11-29 16:29:18'),
+(5, 'Soya', 'SY01', '2020-11-29 16:29:58'),
+(7, 'Ghee', 'GH01', '2020-11-29 14:52:08');
 
 -- --------------------------------------------------------
 
@@ -88,11 +87,11 @@ CREATE TABLE `tblcompany` (
 --
 
 INSERT INTO `tblcompany` (`id`, `CompanyName`, `PostingDate`) VALUES
-(1, 'Amul', '2019-12-25 03:30:51'),
-(2, 'Mother Diary', '2019-12-25 03:30:59'),
-(3, 'Patanjali', '2019-12-25 03:31:09'),
-(4, 'Namaste India', '2019-12-25 03:31:21'),
-(10, 'Paras', '2019-12-25 14:52:50');
+(1, 'Amul', '2020-11-29 03:30:51'),
+(2, 'Mother Diary', '2020-11-29 03:30:59'),
+(3, 'Patanjali', '2020-11-29 03:31:09'),
+(4, 'Namaste India', '2020-11-29 03:31:21'),
+(10, 'Paras', '2020-11-29 14:52:50');
 
 -- --------------------------------------------------------
 
@@ -116,18 +115,26 @@ CREATE TABLE `tblorders` (
 --
 
 INSERT INTO `tblorders` (`id`, `ProductId`, `Quantity`, `InvoiceNumber`, `CustomerName`, `CustomerContactNo`, `PaymentMode`, `InvoiceGenDate`) VALUES
-(1, 4, 2, 753947547, 'Anuj', 9354778033, 'cash', '2019-12-25 08:32:47'),
-(2, 1, 1, 753947547, 'Anuj', 9354778033, 'cash', '2019-12-25 08:32:47'),
-(3, 1, 1, 979148350, 'Sanjeen', 1234567890, 'card', '2019-12-25 11:38:08'),
-(4, 4, 1, 979148350, 'Sanjeen', 1234567890, 'card', '2019-12-25 11:38:08'),
-(5, 1, 1, 861354457, 'Rahul', 9876543210, 'cash', '2019-12-24 11:43:48'),
-(6, 5, 1, 861354457, 'Rahul', 9876543210, 'cash', '2019-12-24 11:43:48'),
-(7, 5, 1, 276794782, 'Sarita', 1122334455, 'cash', '2019-12-25 11:48:06'),
-(8, 6, 1, 276794782, 'Sarita', 1122334455, 'cash', '2019-12-25 11:48:06'),
-(9, 6, 2, 744608164, 'Babu Pandey', 123458962, 'card', '2019-12-25 12:07:50'),
-(10, 2, 2, 744608164, 'Babu Pandey', 123458962, 'card', '2019-12-25 12:07:50'),
-(11, 7, 1, 139640585, 'John', 45632147892, 'cash', '2019-12-25 14:54:24'),
-(12, 5, 1, 139640585, 'John', 45632147892, 'cash', '2019-12-25 14:54:24');
+(1, 4, 2, 753947547, 'Anuj', 9354778033, 'cash', '2020-11-29 08:32:47'),
+(2, 1, 1, 979148350, 'Sanjeen', 1234567890, 'card', '2020-11-29 11:38:08'),
+(3, 1, 1, 861354457, 'Rahul', 9876543210, 'cash', '2020-11-29 03:03:24'),
+(4, 5, 1, 276794782, 'Sarita', 1122334455, 'cash', '2020-11-29 11:48:06'),
+(5, 6, 2, 744608164, 'Babu Pandey', 123458962, 'card', '2020-11-29 12:07:50'),
+(6, 7, 1, 139640585, 'John', 45632147892, 'cash', '2020-11-29 14:54:24'),
+(7, 1, 1, 530589234, 'saad', 93014920913, 'cash', '2020-12-05 03:05:39'),
+(8, 1, 3, 1234, 'Adnan', 8989898, 'cash', '2020-12-05 03:28:35'),
+(9, 4, 1, 413916185, 'Asif', 8374902374, 'cash', '2020-12-05 03:30:04'),
+(10, 2, 3, 1234, 'faisal', 8989898, 'cash', '2020-12-05 03:34:17');
+
+--
+-- Triggers `tblorders`
+--
+DELIMITER $$
+CREATE TRIGGER `transaction` AFTER INSERT ON `tblorders` FOR EACH ROW UPDATE tblproducts
+SET tblproducts.Quantity=tblproducts.Quantity-tblorders.Quantity
+WHERE id=NEW.id
+$$
+DELIMITER ;
 
 -- --------------------------------------------------------
 
@@ -140,6 +147,7 @@ CREATE TABLE `tblproducts` (
   `CategoryName` varchar(150) DEFAULT NULL,
   `CompanyName` varchar(150) DEFAULT NULL,
   `ProductName` varchar(150) DEFAULT NULL,
+  `Quantity` int(100) DEFAULT NULL,
   `ProductPrice` decimal(10,0) DEFAULT current_timestamp(),
   `PostingDate` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `UpdationDate` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp()
@@ -149,14 +157,12 @@ CREATE TABLE `tblproducts` (
 -- Dumping data for table `tblproducts`
 --
 
-INSERT INTO `tblproducts` (`id`, `CategoryName`, `CompanyName`, `ProductName`, `ProductPrice`, `PostingDate`, `UpdationDate`) VALUES
-(1, 'Milk', 'Amul', 'Toned milk 500ml', '22', '2019-12-25 05:22:37', '2019-12-25 05:22:37'),
-(2, 'Milk', 'Amul', 'Toned milk 1ltr', '42', '2019-12-25 04:25:20', NULL),
-(3, 'Milk', 'Mother Diary', 'Full Cream Milk 500ml', '26', '2019-12-25 06:42:24', '2019-12-25 06:42:24'),
-(4, 'Milk', 'Mother Diary', 'Full Cream Milk 1ltr', '50', '2019-12-25 06:42:39', '2019-12-25 06:42:39'),
-(5, 'Butter', 'Amul', 'Butter 100mg', '46', '2019-12-25 11:42:56', '2019-12-25 11:42:56'),
-(6, 'Bread', 'Patanjali', 'Sandwich Bread', '30', '2019-12-25 11:40:10', NULL),
-(7, 'Ghee', 'Paras', 'Ghee 500mg', '350', '2019-12-25 14:53:33', '2019-12-25 14:53:33');
+INSERT INTO `tblproducts` (`id`, `CategoryName`, `CompanyName`, `ProductName`, `Quantity`, `ProductPrice`, `PostingDate`, `UpdationDate`) VALUES
+(1, 'Paneer', 'Amul', 'Fresh Paneer', 50, '100', '2020-12-05 03:28:56', '2020-12-05 03:28:56'),
+(2, 'Milk', 'Amul', 'Toned Milk 500ml', 30, '22', '2020-12-05 03:26:49', '2020-12-05 03:26:49'),
+(3, 'Milk', 'Amul', 'Toned Milk 1L', 40, '44', '2020-12-05 03:26:52', '2020-12-05 03:26:52'),
+(4, 'Butter', 'Amul', 'Smooth Butter', 30, '50', '2020-12-05 03:26:55', '2020-12-05 03:26:55'),
+(5, 'Bread', 'Patanjali', 'Brown Bread', 30, '14', '2020-12-05 03:27:00', '2020-12-05 03:27:00');
 
 --
 -- Indexes for dumped tables
@@ -218,13 +224,13 @@ ALTER TABLE `tblcompany`
 -- AUTO_INCREMENT for table `tblorders`
 --
 ALTER TABLE `tblorders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT for table `tblproducts`
 --
 ALTER TABLE `tblproducts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
